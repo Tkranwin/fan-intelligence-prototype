@@ -34,13 +34,12 @@
     .persona-bar {
       background: #ffffff; border-bottom: 1px solid #e5e7eb;
       padding: 8px 24px; display: flex; align-items: center; justify-content: space-between;
-      flex-wrap: wrap; gap: 4px;
+      flex-wrap: nowrap; gap: 8px;
     }
-    .persona-bar-info { font-size: 12px; color: #6b7280; }
+    .persona-bar-info { font-size: 12px; color: #6b7280; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
     .persona-bar-info strong { color: #1d1d1f; }
-    .persona-bar-switch { font-size: 12px; color: #005C37; text-decoration: none; font-weight: 500; }
+    .persona-bar-switch { font-size: 12px; color: #005C37; text-decoration: none; font-weight: 500; white-space: nowrap; flex-shrink: 0; }
     .persona-bar-switch:hover { color: #00804d; }
-    .desktop-only { display: flex; }
     @media (max-width: 768px) {
       .desktop-only { display: none; }
     }
@@ -207,6 +206,7 @@
     @media (max-width: 768px) {
       .toggle-panel { display: none; }
       .mobile-toggles { display: flex; }
+      .mobile-toggles-label { display: block !important; }
       .content-grid { flex-direction: column; }
       .briefing-body { padding: 16px; }
       .cta-area { padding: 0 16px 16px; }
@@ -219,13 +219,9 @@
   <!-- Nav -->
   <nav class="nav">
     <a href="/" class="nav-brand">Fan Intelligence Prototype</a>
-    <div class="nav-right desktop-only">
-      <span class="nav-persona">{{ persona.display_name }}</span>
-      <a href="/briefing/{{ other_persona.id }}" class="nav-switch">Switch to {{ other_persona.display_name }} &rarr;</a>
-    </div>
   </nav>
 
-  <!-- Persona context bar (mobile-friendly) -->
+  <!-- Persona context bar -->
   <div class="persona-bar">
     <span class="persona-bar-info">Viewing: <strong>{{ persona.display_name }}</strong> &middot; {{ persona.tagline }}</span>
     <a href="/briefing/{{ other_persona.id }}" class="persona-bar-switch">Switch to {{ other_persona.display_name }} &rarr;</a>
@@ -252,6 +248,7 @@
     </div>
 
     <!-- Mobile toggle pills -->
+    <div style="display:none;font-size:11px;color:#9ca3af;margin-bottom:6px;" class="mobile-toggles-label">Tap to disconnect a data source:</div>
     <div class="mobile-toggles" id="mobile-toggles"></div>
 
     <!-- Grid: toggles + briefing -->
