@@ -22,22 +22,33 @@
     }
     .nav-brand { font-size: 15px; font-weight: 600; color: #1d1d1f; text-decoration: none; }
 
-    .main { max-width: 800px; margin: 0 auto; padding: 48px 24px; }
+    .main { max-width: 800px; margin: 0 auto; padding: 32px 24px; }
 
     .framing {
-      font-size: 17px; line-height: 1.7; color: #6b7280;
-      margin-bottom: 48px; max-width: 640px;
+      font-size: 16px; line-height: 1.6; color: #6b7280;
+      margin-bottom: 28px; max-width: 640px;
     }
 
     .section-label {
       font-size: 11px; font-weight: 600; color: #9ca3af;
-      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 16px;
+      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px;
     }
 
-    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 56px; }
-    @media (max-width: 640px) { .compare { grid-template-columns: 1fr; } }
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
+    @media (max-width: 640px) {
+      .main { padding: 20px 16px; }
+      .framing { font-size: 14px; margin-bottom: 20px; }
+      .section-label { margin-bottom: 8px; }
+      .compare { grid-template-columns: 1fr; gap: 8px; margin-bottom: 24px; }
+      .compare-card { padding: 12px 14px; }
+      .compare-text { font-size: 12px; line-height: 1.5; }
+      .compare-tag { margin-bottom: 4px; }
+      .persona-card { padding: 16px; }
+      .persona-name { font-size: 16px; }
+      .persona-desc { font-size: 12px; margin-bottom: 10px; }
+    }
 
-    .compare-card { border-radius: 14px; padding: 24px; }
+    .compare-card { border-radius: 12px; padding: 16px; }
     .compare-card.before {
       background: #ffffff; border: 1px solid #e5e7eb;
     }
@@ -46,11 +57,11 @@
     }
     .compare-tag {
       font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
-      margin-bottom: 12px; display: inline-block;
+      margin-bottom: 8px; display: inline-block;
     }
     .compare-tag.before-tag { color: #9ca3af; }
     .compare-tag.after-tag { color: #00FF87; }
-    .compare-text { font-size: 14px; line-height: 1.7; }
+    .compare-text { font-size: 13px; line-height: 1.6; }
     .compare-card.before .compare-text { color: #9ca3af; }
     .compare-card.after .compare-text { color: #d1fae5; }
 
@@ -99,8 +110,7 @@
 
     <p class="framing">
       Sports clubs sit on rich data &mdash; ticketing, CRM, event ops, marketing, player performance &mdash;
-      but it&rsquo;s siloed across departments. This prototype shows what becomes possible when that data is unified:
-      personalized fan engagement that converts.
+      but it&rsquo;s siloed across departments. This prototype shows what becomes possible when that data is unified.
     </p>
 
     <div class="section-label">The difference unified data makes</div>
@@ -147,7 +157,7 @@
 
   </div>
 
-  <div class="footer">Built by Tommy Kranwinkle &middot; Powered by Claude &middot; Data is illustrative</div>
+  <div class="footer">Built by Tommy Kranwinkle &middot; AI-generated from unified club data &middot; Data is illustrative</div>
 
 </body>
 </html>
