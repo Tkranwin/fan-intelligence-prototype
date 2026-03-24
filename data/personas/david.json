@@ -1,0 +1,375 @@
+{
+  "persona_id": "david",
+  "display_name": "David",
+  "full_name": "David Chen",
+  "tagline": "Lapsed Season Ticket Holder",
+  "description": "3-year member. Hasn't attended in 2026. Gold loyalty tier.",
+  "attribute_tags": ["3-year member", "No matches in 2026", "Gold loyalty tier"],
+
+  "demographics": {
+    "age": 38,
+    "neighborhood": "Ballard",
+    "zip_code": "98107",
+    "member_since": "2022-02-15",
+    "fan_type": "lapsed_season_ticket_holder"
+  },
+
+  "ticketing": {
+    "source_label": "Ticketing",
+    "season_ticket_history": {
+      "2022": {
+        "status": "active",
+        "section": 122,
+        "row": "G",
+        "seats": [7, 8],
+        "tier": "premium",
+        "price_per_match": 52,
+        "total_paid": 884,
+        "home_matches_total": 17,
+        "home_matches_attended": 15,
+        "attendance_rate": 0.88,
+        "matches_attended": [
+          {"date": "2022-02-26", "opponent": "Nashville SC", "result": "W 1-0"},
+          {"date": "2022-03-12", "opponent": "LA Galaxy", "result": "D 0-0"},
+          {"date": "2022-03-19", "opponent": "Minnesota United", "result": "W 2-1"},
+          {"date": "2022-04-02", "opponent": "Portland Timbers", "result": "W 3-1"},
+          {"date": "2022-04-16", "opponent": "Real Salt Lake", "result": "L 0-1"},
+          {"date": "2022-05-07", "opponent": "Vancouver Whitecaps", "result": "W 2-0"},
+          {"date": "2022-05-21", "opponent": "LAFC", "result": "D 1-1"},
+          {"date": "2022-06-18", "opponent": "Austin FC", "result": "W 1-0"},
+          {"date": "2022-07-09", "opponent": "Portland Timbers", "result": "W 2-0"},
+          {"date": "2022-07-23", "opponent": "Colorado Rapids", "result": "W 3-2"},
+          {"date": "2022-08-13", "opponent": "FC Dallas", "result": "D 2-2"},
+          {"date": "2022-08-27", "opponent": "San Jose Earthquakes", "result": "W 4-1"},
+          {"date": "2022-09-17", "opponent": "Houston Dynamo", "result": "W 2-0"},
+          {"date": "2022-10-01", "opponent": "Vancouver Whitecaps", "result": "W 1-0"},
+          {"date": "2022-10-09", "opponent": "Sporting KC", "result": "L 1-2"}
+        ],
+        "missed_matches": [
+          {"date": "2022-06-04", "opponent": "Inter Miami", "reason": "travel"},
+          {"date": "2022-09-03", "opponent": "Chicago Fire", "reason": "unknown"}
+        ]
+      },
+      "2023": {
+        "status": "active",
+        "section": 122,
+        "row": "G",
+        "seats": [7, 8],
+        "tier": "premium",
+        "price_per_match": 55,
+        "total_paid": 935,
+        "home_matches_total": 17,
+        "home_matches_attended": 12,
+        "attendance_rate": 0.71,
+        "matches_attended": [
+          {"date": "2023-02-25", "opponent": "Nashville SC", "result": "D 1-1"},
+          {"date": "2023-03-11", "opponent": "Portland Timbers", "result": "W 2-1"},
+          {"date": "2023-03-25", "opponent": "St. Louis CITY", "result": "L 0-2"},
+          {"date": "2023-04-15", "opponent": "Colorado Rapids", "result": "W 1-0"},
+          {"date": "2023-05-06", "opponent": "Vancouver Whitecaps", "result": "D 0-0"},
+          {"date": "2023-05-27", "opponent": "LA Galaxy", "result": "W 2-1"},
+          {"date": "2023-06-17", "opponent": "Portland Timbers", "result": "W 1-0"},
+          {"date": "2023-07-15", "opponent": "Austin FC", "result": "L 1-3"},
+          {"date": "2023-08-05", "opponent": "Real Salt Lake", "result": "W 2-0"},
+          {"date": "2023-08-26", "opponent": "Vancouver Whitecaps", "result": "W 3-1"},
+          {"date": "2023-09-16", "opponent": "Minnesota United", "result": "D 2-2"},
+          {"date": "2023-10-07", "opponent": "San Jose Earthquakes", "result": "W 2-0"}
+        ],
+        "missed_matches": [
+          {"date": "2023-04-01", "opponent": "LAFC", "reason": "unknown"},
+          {"date": "2023-06-03", "opponent": "FC Dallas", "reason": "unknown"},
+          {"date": "2023-07-01", "opponent": "Houston Dynamo", "reason": "unknown"},
+          {"date": "2023-09-02", "opponent": "Sporting KC", "reason": "unknown"},
+          {"date": "2023-10-21", "opponent": "Inter Miami", "reason": "unknown"}
+        ],
+        "notes": "Attendance dropped from 88% to 71%. Began missing matches without transferring tickets."
+      },
+      "2024": {
+        "status": "active",
+        "section": 122,
+        "row": "G",
+        "seats": [7, 8],
+        "tier": "premium",
+        "price_per_match": 58,
+        "total_paid": 986,
+        "home_matches_total": 17,
+        "home_matches_attended": 9,
+        "attendance_rate": 0.53,
+        "matches_attended": [
+          {"date": "2024-02-24", "opponent": "Portland Timbers", "result": "D 1-1"},
+          {"date": "2024-03-16", "opponent": "Vancouver Whitecaps", "result": "W 2-0"},
+          {"date": "2024-04-06", "opponent": "LA Galaxy", "result": "L 0-2"},
+          {"date": "2024-05-04", "opponent": "Portland Timbers", "result": "W 2-1"},
+          {"date": "2024-06-01", "opponent": "Real Salt Lake", "result": "D 0-0"},
+          {"date": "2024-06-29", "opponent": "Colorado Rapids", "result": "W 1-0"},
+          {"date": "2024-08-03", "opponent": "Vancouver Whitecaps", "result": "W 2-1"},
+          {"date": "2024-09-14", "opponent": "LAFC", "result": "L 1-3"},
+          {"date": "2024-10-05", "opponent": "San Jose Earthquakes", "result": "W 3-0"}
+        ],
+        "missed_matches": [
+          {"date": "2024-03-02", "opponent": "Austin FC", "reason": "unknown"},
+          {"date": "2024-03-30", "opponent": "Nashville SC", "reason": "unknown"},
+          {"date": "2024-04-20", "opponent": "FC Dallas", "reason": "unknown"},
+          {"date": "2024-05-18", "opponent": "Minnesota United", "reason": "unknown"},
+          {"date": "2024-07-13", "opponent": "Houston Dynamo", "reason": "unknown"},
+          {"date": "2024-08-17", "opponent": "Sporting KC", "reason": "unknown"},
+          {"date": "2024-09-28", "opponent": "Inter Miami", "reason": "unknown"},
+          {"date": "2024-10-19", "opponent": "St. Louis CITY", "reason": "unknown"}
+        ],
+        "notes": "Attendance dropped sharply to 53%. Only attended rivalry matches (Portland, Vancouver) and a few others. Last match attended: Oct 5, 2024.",
+        "last_match_attended": {
+          "date": "2024-10-05",
+          "opponent": "San Jose Earthquakes",
+          "result": "W 3-0",
+          "days_since": 536
+        }
+      },
+      "2025": {
+        "status": "non_renewal",
+        "renewal_offered_date": "2024-11-01",
+        "renewal_deadline": "2024-12-15",
+        "renewal_price_per_match": 62,
+        "renewal_total": 1054,
+        "outcome": "did_not_renew",
+        "exit_survey_completed": false,
+        "notes": "Did not respond to renewal emails. No exit survey completed. Season ticket seats (Section 122, Row G, Seats 7-8) were released in January 2025."
+      },
+      "2026": {
+        "status": "no_tickets",
+        "matches_attended": 0,
+        "single_tickets_purchased": 0,
+        "notes": "Zero engagement with ticketing in 2026."
+      }
+    },
+    "attendance_pattern": {
+      "preferred_opponents": ["Portland Timbers", "Vancouver Whitecaps", "LA Galaxy"],
+      "portland_attendance": "Attended 100% of Portland home matches across all 3 seasons (6/6)",
+      "vancouver_attendance": "Attended 100% of Vancouver home matches across all 3 seasons (6/6)",
+      "attendance_trend": [0.88, 0.71, 0.53],
+      "trend_label": "declining",
+      "last_attended": "2024-10-05"
+    },
+    "seat_preferences": {
+      "section": 122,
+      "row": "G",
+      "seats": [7, 8],
+      "side": "west_sideline",
+      "view": "midfield",
+      "years_in_section": 3,
+      "section_available_seats_2026": [
+        {"row": "F", "seats": [5, 6], "price_standard": 62, "price_gold": 45},
+        {"row": "H", "seats": [9, 10], "price_standard": 62, "price_gold": 45}
+      ]
+    }
+  },
+
+  "crm": {
+    "source_label": "CRM",
+    "email_engagement": {
+      "total_emails_received_2024": 87,
+      "total_emails_received_2025": 52,
+      "engagement_by_quarter": {
+        "2024_Q1": {"sent": 22, "opened": 14, "clicked": 6, "open_rate": 0.64, "click_rate": 0.27},
+        "2024_Q2": {"sent": 21, "opened": 10, "clicked": 3, "open_rate": 0.48, "click_rate": 0.14},
+        "2024_Q3": {"sent": 22, "opened": 7, "clicked": 1, "open_rate": 0.32, "click_rate": 0.05},
+        "2024_Q4": {"sent": 22, "opened": 4, "clicked": 0, "open_rate": 0.18, "click_rate": 0.00},
+        "2025_Q1": {"sent": 18, "opened": 2, "clicked": 0, "open_rate": 0.11, "click_rate": 0.00},
+        "2025_Q2": {"sent": 16, "opened": 1, "clicked": 0, "open_rate": 0.06, "click_rate": 0.00},
+        "2025_Q3": {"sent": 10, "opened": 0, "clicked": 0, "open_rate": 0.00, "click_rate": 0.00},
+        "2025_Q4": {"sent": 8, "opened": 0, "clicked": 0, "open_rate": 0.00, "click_rate": 0.00},
+        "2026_Q1": {"sent": 12, "opened": 1, "clicked": 0, "open_rate": 0.08, "click_rate": 0.00}
+      },
+      "engagement_decay_summary": "Open rate declined from 64% (early 2024) to near 0% by late 2025. One email opened in Q1 2026 — subject line was 'Stefan Frei announces final season.' No clicks.",
+      "last_email_opened": {
+        "date": "2026-01-16",
+        "subject": "Stefan Frei announces final season",
+        "clicked": false
+      },
+      "last_email_clicked": {
+        "date": "2024-03-08",
+        "subject": "Portland is coming to Lumen Field — your seats are waiting",
+        "link_clicked": "Portland match preview article"
+      },
+      "unsubscribed": false,
+      "email_frequency_reduced": true,
+      "frequency_reduction_date": "2025-07-01",
+      "frequency_reduction_reason": "Low engagement triggered automated frequency reduction"
+    },
+    "social_media": {
+      "instagram_follow": true,
+      "instagram_follow_date": "2022-03-10",
+      "instagram_engagement": "passive",
+      "instagram_last_like": "2025-11-22",
+      "instagram_last_like_content": "Jordan Morris training photo",
+      "twitter_follow": false,
+      "facebook_follow": false,
+      "tiktok_follow": false,
+      "notes": "Still follows on Instagram. Occasional passive engagement (likes, no comments). Last liked a Morris training photo in Nov 2025."
+    },
+    "contact_attempts": [
+      {
+        "date": "2024-11-15",
+        "type": "email",
+        "subject": "Renew your season tickets — same seats, same community",
+        "outcome": "opened, no action"
+      },
+      {
+        "date": "2024-12-01",
+        "type": "email",
+        "subject": "Last chance: your Section 122 seats expire Dec 15",
+        "outcome": "not opened"
+      },
+      {
+        "date": "2024-12-10",
+        "type": "phone",
+        "outcome": "voicemail left, no callback"
+      },
+      {
+        "date": "2025-01-20",
+        "type": "email",
+        "subject": "We miss you, David — special offer inside",
+        "outcome": "not opened"
+      },
+      {
+        "date": "2025-06-15",
+        "type": "email",
+        "subject": "Summer matches at Lumen Field — single tickets available",
+        "outcome": "not opened"
+      }
+    ]
+  },
+
+  "marketing": {
+    "source_label": "Marketing",
+    "merchandise_purchases": [
+      {
+        "date": "2022-03-15",
+        "item": "Sounders home jersey 2022",
+        "customization": null,
+        "price": 120,
+        "channel": "stadium_store"
+      },
+      {
+        "date": "2022-09-20",
+        "item": "Sounders scarf — Cascadia Cup edition",
+        "price": 30,
+        "channel": "stadium_store"
+      },
+      {
+        "date": "2023-04-22",
+        "item": "Jordan Morris #13 home jersey 2023",
+        "customization": "MORRIS 13",
+        "price": 155,
+        "channel": "online_store"
+      },
+      {
+        "date": "2023-07-04",
+        "item": "Sounders dad hat",
+        "price": 32,
+        "channel": "stadium_store"
+      }
+    ],
+    "last_purchase_date": "2023-07-04",
+    "total_merchandise_spent": 337,
+    "player_affinity": {
+      "primary": "Jordan Morris",
+      "signals": [
+        "Purchased Morris #13 jersey (2023)",
+        "Clicked Morris-related email content (2024-Q1)",
+        "Liked Morris Instagram training photo (2025-11)",
+        "Opened Frei retirement email (2026-01) — secondary affinity signal"
+      ],
+      "secondary": "Stefan Frei",
+      "secondary_signals": [
+        "Only 2026 email opened was Frei retirement announcement"
+      ]
+    },
+    "campaign_response_history": {
+      "flash_sales": {"received": 8, "opened": 2, "converted": 0},
+      "rivalry_match_promos": {"received": 6, "opened": 4, "converted": 1, "note": "Responded to Portland match promo in Mar 2024 — clicked through but did not purchase single ticket"},
+      "renewal_campaigns": {"received": 5, "opened": 1, "converted": 0},
+      "player_content": {"received": 12, "opened": 5, "converted": 0, "note": "Highest engagement category — especially Morris and Frei content"}
+    }
+  },
+
+  "finance": {
+    "source_label": "Finance",
+    "loyalty_tier": "gold",
+    "loyalty_tier_basis": "3 consecutive years as season ticket holder (2022-2024)",
+    "loyalty_tier_expiry": "2026-12-31",
+    "loyalty_tier_note": "Gold status extended through 2026 as a retention incentive, despite non-renewal. Standard policy: tier drops after 1 year of inactivity.",
+    "total_lifetime_spend": {
+      "season_tickets": 2805,
+      "merchandise": 337,
+      "food_and_beverage_estimated": 420,
+      "total": 3562
+    },
+    "renewal_pricing": {
+      "gold_tier_per_match_section_122": 45,
+      "standard_per_match_section_122": 62,
+      "gold_savings_per_match": 17,
+      "gold_savings_per_season": 289,
+      "mid_season_package_available": true,
+      "mid_season_matches_remaining": 9,
+      "mid_season_package_price_gold": 405,
+      "mid_season_package_price_standard": 558
+    },
+    "single_ticket_pricing": {
+      "section_122_portland": {"standard": 72, "gold": 45},
+      "section_122_regular": {"standard": 62, "gold": 45},
+      "section_300_regular": {"standard": 38, "gold": 28}
+    },
+    "payment_history": {
+      "payment_method": "Visa ending 4821",
+      "payment_issues": false,
+      "auto_renew_was_enabled": false
+    }
+  },
+
+  "event_ops": {
+    "source_label": "Event Ops",
+    "section_122_updates": [
+      {
+        "update": "West concourse renovated — wider walkways, two new food vendors (Ramen Rendezvous, Cloud City Coffee)",
+        "date": "2026-02-28",
+        "relevance": "Near David's old seats. The concourse experience is notably improved."
+      },
+      {
+        "update": "New LED video boards behind both goals",
+        "date": "2026-02-15",
+        "relevance": "Enhanced atmosphere for all sections."
+      },
+      {
+        "update": "WiFi upgrade stadium-wide — 3x faster",
+        "date": "2026-01-15",
+        "relevance": "Improved mobile experience for ordering and sharing."
+      }
+    ],
+    "gate_recommendation": "South Gate (closest to Section 122)",
+    "parking_note": "David previously parked in North Lot. Street parking on Occidental Ave free after 6 PM on weekdays — closer to his section."
+  },
+
+  "derived_insights": {
+    "churn_risk": "high",
+    "churn_risk_factors": [
+      "Non-renewal after 3 years",
+      "Attendance declining year-over-year (88% → 71% → 53%)",
+      "Email engagement near zero",
+      "No purchases in 2+ years",
+      "Zero matches attended in 2026"
+    ],
+    "re_engagement_opportunities": [
+      "Portland match (Apr 12) — attended every Portland home match in his 3-year tenure",
+      "Jordan Morris content — jersey purchase + Instagram engagement signals strong player affinity",
+      "Stefan Frei farewell season — opened the one Frei-related email in 2026",
+      "Gold loyalty pricing — $17/match savings is a tangible hook",
+      "Section 122 availability — seats near his old row are available"
+    ],
+    "optimal_approach": "Lead with rivalry match (Portland) + player affinity (Morris), anchor with loyalty pricing, create urgency with seat availability and expiry",
+    "avoid": [
+      "Generic promotional language — he's ignored dozens of these emails",
+      "Renewal pressure — he clearly chose not to renew; acknowledge, don't push",
+      "Stats-heavy content — his engagement signals favor personal/emotional content over data"
+    ]
+  }
+}

@@ -1,0 +1,200 @@
+{
+  "persona_id": "maria",
+  "display_name": "Maria",
+  "full_name": "Maria Santos",
+  "tagline": "First-Time Fan",
+  "description": "Just moved to Seattle. First MLS match. Knows nothing about the Sounders.",
+  "attribute_tags": ["New to Seattle", "First MLS match", "Learning the sport"],
+
+  "demographics": {
+    "age": 28,
+    "neighborhood": "Fremont",
+    "zip_code": "98103",
+    "moved_to_seattle": "2025-09-15",
+    "previous_city": "Denver, CO",
+    "fan_type": "first_time"
+  },
+
+  "ticketing": {
+    "source_label": "Ticketing",
+    "purchase_history": [
+      {
+        "date": "2026-03-18",
+        "match_id": "SEA-2026-03",
+        "match_date": "2026-03-21",
+        "opponent": "Vancouver Whitecaps",
+        "section": 305,
+        "row": "C",
+        "seat": 12,
+        "price": 34,
+        "purchase_channel": "online",
+        "referral_source": "coworker_recommendation",
+        "first_purchase": true
+      }
+    ],
+    "total_matches_attended": 1,
+    "total_spent_tickets": 34,
+    "buyer_flags": ["new_buyer", "single_ticket", "first_mls_match"],
+    "seat_preferences": {
+      "section": 305,
+      "level": "300_level",
+      "price_sensitivity": "moderate"
+    }
+  },
+
+  "crm": {
+    "source_label": "CRM",
+    "email_engagement": {
+      "opted_in": true,
+      "opt_in_date": "2026-03-18",
+      "emails_received": 2,
+      "emails_opened": 2,
+      "emails_clicked": 1,
+      "open_rate": 1.0,
+      "emails": [
+        {
+          "date": "2026-03-19",
+          "subject": "Your tickets for Sounders vs. Vancouver — everything you need to know",
+          "opened": true,
+          "clicked": true,
+          "link_clicked": "Stadium guide and getting there"
+        },
+        {
+          "date": "2026-03-22",
+          "subject": "Thanks for coming! Here's your match recap",
+          "opened": true,
+          "clicked": false
+        }
+      ]
+    },
+    "social_media": {
+      "instagram_follow": false,
+      "twitter_follow": false,
+      "facebook_follow": false,
+      "tiktok_follow": false,
+      "notes": "No social media connection to the club yet."
+    },
+    "content_preferences": {
+      "inferred": "newcomer_friendly",
+      "notes": "Clicked on stadium guide link — likely values practical, orientation-style content."
+    }
+  },
+
+  "marketing": {
+    "source_label": "Marketing",
+    "merchandise_purchases": [],
+    "campaign_history": {
+      "received": 0,
+      "notes": "Too new for campaign targeting. No historical data to segment on."
+    },
+    "player_affinity": {
+      "primary": null,
+      "signals": [],
+      "notes": "No data yet. Player interest to be developed through first-match experience."
+    },
+    "acquisition_channel": "organic_coworker_referral"
+  },
+
+  "finance": {
+    "source_label": "Finance",
+    "loyalty_tier": null,
+    "total_lifetime_spend": {
+      "tickets": 34,
+      "merchandise": 0,
+      "total": 34
+    },
+    "pricing_context": {
+      "section_305_next_match": {
+        "match": "Real Salt Lake (Mar 28)",
+        "price": 32
+      },
+      "section_305_portland": {
+        "match": "Portland Timbers (Apr 12)",
+        "price": 38,
+        "availability": "limited — 3 seats left in Section 305"
+      }
+    }
+  },
+
+  "event_ops": {
+    "source_label": "Event Ops",
+    "section_305_info": {
+      "level": "Upper bowl",
+      "nearest_gate": "North Gate",
+      "food_nearby": [
+        "Ivar's Fish Bar (Section 305 concourse)",
+        "Local craft beer stand (Section 308 concourse)"
+      ],
+      "restrooms": "Section 303 and 307 concourse",
+      "atmosphere": "Family-friendly area, good sightlines, less intense than lower bowl"
+    },
+    "first_time_fan_tips": {
+      "arrive_early": "Gates open 90 minutes before kickoff. Arrive at least 60 minutes early for your first time.",
+      "match_duration": "About 2 hours total — two 45-minute halves plus a 15-minute halftime. No timeouts.",
+      "what_to_wear": "Dress in layers. Seattle evenings can be chilly even in spring. Rave green (Sounders color) if you have it, but not required.",
+      "mobile_tickets": "Tickets are on your phone via the Sounders app or email.",
+      "supporter_culture": "You'll hear chanting and drums — that's the Emerald City Supporters in Sections 121-123. It's fun, not intimidating. Everyone is welcome."
+    }
+  },
+
+  "match_attended": {
+    "match_id": "SEA-2026-03",
+    "date": "2026-03-21",
+    "opponent": "Vancouver Whitecaps",
+    "result": "3-0 Seattle win",
+    "highlights": [
+      "Jordan Morris opened the scoring in the 23rd minute with a clinical finish",
+      "Leo Chu scored a spectacular solo goal in the 58th minute — dribbled past three defenders",
+      "Yeimar headed in a corner in the 78th minute to seal it",
+      "Stefan Frei kept a clean sheet with one outstanding save in the first half",
+      "Attendance: 33,891. Great atmosphere for a Cascadia Cup match."
+    ],
+    "experience_notes": "First MLS match experience. The 3-0 win was an ideal first impression — goals, atmosphere, clean sheet.",
+    "key_moments_for_newcomer": [
+      {
+        "minute": 23,
+        "event": "Morris goal",
+        "newcomer_context": "The stadium erupted. This is what it feels like when the home team scores."
+      },
+      {
+        "minute": 42,
+        "event": "Frei save",
+        "newcomer_context": "The goalkeeper made a diving save. The crowd gasped, then cheered. That's Stefan Frei — he's been doing this for 12 years."
+      },
+      {
+        "minute": 58,
+        "event": "Chu solo goal",
+        "newcomer_context": "Leo Chu picked up the ball and ran past three defenders before scoring. The crowd was on their feet before he even shot."
+      },
+      {
+        "minute": 78,
+        "event": "Yeimar header",
+        "newcomer_context": "A set piece goal from a corner kick — the tall defender rose above everyone. 3-0, the stadium was celebrating."
+      }
+    ]
+  },
+
+  "derived_insights": {
+    "conversion_potential": "high",
+    "conversion_factors": [
+      "Had a great first experience (3-0 win, exciting match)",
+      "Opened both emails — engaged and curious",
+      "Clicked stadium guide — values practical info",
+      "New to city — looking for community and things to do",
+      "Coworker connection — social proof and potential repeat attendance partner"
+    ],
+    "next_steps": [
+      "Portland match (Apr 12) — the biggest rivalry, best atmosphere of the season, ideal second match",
+      "Player introduction content — she saw Morris, Chu, Yeimar, and Frei play; build on those",
+      "Community angle — she's new to Seattle, the Sounders can be part of her new life here",
+      "Keep it simple — don't assume MLS knowledge, explain context"
+    ],
+    "optimal_approach": "Warm, welcoming, assume nothing about soccer knowledge. Build on the positive first experience. Make the next match feel like a natural next step, not a sales pitch.",
+    "avoid": [
+      "Heavy stats or tactical analysis — she's brand new",
+      "Assumed knowledge of MLS, rules, or player history",
+      "Hard sell or urgency pressure — she needs to feel invited, not pushed",
+      "Jargon (VAR, offsides trap, false 9, etc.) without explanation"
+    ]
+  }
+}

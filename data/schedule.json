@@ -1,0 +1,225 @@
+{
+  "team": "Seattle Sounders FC",
+  "season": 2026,
+  "venue_default": "Lumen Field",
+  "matches": [
+    {
+      "id": "SEA-2026-01",
+      "date": "2026-03-07",
+      "time": "19:30",
+      "timezone": "America/Los_Angeles",
+      "opponent": "LA Galaxy",
+      "home_away": "home",
+      "venue": "Lumen Field",
+      "competition": "MLS Regular Season",
+      "matchday": 1,
+      "result": {
+        "score": "2-1",
+        "winner": "Seattle",
+        "attendance": 35218
+      },
+      "rivalry_level": "moderate",
+      "notes": "Season opener. Sold out lower bowl."
+    },
+    {
+      "id": "SEA-2026-02",
+      "date": "2026-03-14",
+      "time": "17:00",
+      "timezone": "America/Los_Angeles",
+      "opponent": "Austin FC",
+      "home_away": "away",
+      "venue": "Q2 Stadium",
+      "competition": "MLS Regular Season",
+      "matchday": 2,
+      "result": {
+        "score": "1-1",
+        "winner": "draw",
+        "attendance": 20738
+      },
+      "rivalry_level": "low",
+      "notes": null
+    },
+    {
+      "id": "SEA-2026-03",
+      "date": "2026-03-21",
+      "time": "19:00",
+      "timezone": "America/Los_Angeles",
+      "opponent": "Vancouver Whitecaps",
+      "home_away": "home",
+      "venue": "Lumen Field",
+      "competition": "MLS Regular Season",
+      "matchday": 3,
+      "result": {
+        "score": "3-0",
+        "winner": "Seattle",
+        "attendance": 33891
+      },
+      "rivalry_level": "high",
+      "notes": "Cascadia Cup match. Dominant performance."
+    },
+    {
+      "id": "SEA-2026-04",
+      "date": "2026-03-28",
+      "time": "19:30",
+      "timezone": "America/Los_Angeles",
+      "opponent": "Real Salt Lake",
+      "home_away": "home",
+      "venue": "Lumen Field",
+      "competition": "MLS Regular Season",
+      "matchday": 4,
+      "result": null,
+      "rivalry_level": "low",
+      "notes": "Next home match."
+    },
+    {
+      "id": "SEA-2026-05",
+      "date": "2026-04-04",
+      "time": "17:30",
+      "timezone": "America/Los_Angeles",
+      "opponent": "Minnesota United",
+      "home_away": "away",
+      "venue": "Allianz Field",
+      "competition": "MLS Regular Season",
+      "matchday": 5,
+      "result": null,
+      "rivalry_level": "low",
+      "notes": null
+    },
+    {
+      "id": "SEA-2026-06",
+      "date": "2026-04-12",
+      "time": "19:00",
+      "timezone": "America/Los_Angeles",
+      "opponent": "Portland Timbers",
+      "home_away": "home",
+      "venue": "Lumen Field",
+      "competition": "MLS Regular Season",
+      "matchday": 6,
+      "result": null,
+      "rivalry_level": "maximum",
+      "notes": "Biggest rivalry in MLS. Cascadia Cup. Expected sellout. Tifo planned by ECS."
+    },
+    {
+      "id": "SEA-2026-07",
+      "date": "2026-04-18",
+      "time": "19:30",
+      "timezone": "America/Los_Angeles",
+      "opponent": "LAFC",
+      "home_away": "away",
+      "venue": "BMO Stadium",
+      "competition": "MLS Regular Season",
+      "matchday": 7,
+      "result": null,
+      "rivalry_level": "moderate",
+      "notes": null
+    },
+    {
+      "id": "SEA-2026-08",
+      "date": "2026-04-25",
+      "time": "16:00",
+      "timezone": "America/Los_Angeles",
+      "opponent": "Colorado Rapids",
+      "home_away": "home",
+      "venue": "Lumen Field",
+      "competition": "MLS Regular Season",
+      "matchday": 8,
+      "result": null,
+      "rivalry_level": "low",
+      "notes": "Saturday afternoon match."
+    },
+    {
+      "id": "SEA-2026-09",
+      "date": "2026-05-03",
+      "time": "19:00",
+      "timezone": "America/Los_Angeles",
+      "opponent": "San Jose Earthquakes",
+      "home_away": "home",
+      "venue": "Lumen Field",
+      "competition": "MLS Regular Season",
+      "matchday": 9,
+      "result": null,
+      "rivalry_level": "low",
+      "notes": null
+    },
+    {
+      "id": "SEA-2026-10",
+      "date": "2026-05-10",
+      "time": "17:00",
+      "timezone": "America/Los_Angeles",
+      "opponent": "Portland Timbers",
+      "home_away": "away",
+      "venue": "Providence Park",
+      "competition": "MLS Regular Season",
+      "matchday": 10,
+      "result": null,
+      "rivalry_level": "maximum",
+      "notes": "Away day at Portland. Travel packages available."
+    },
+    {
+      "id": "SEA-2026-11",
+      "date": "2026-05-17",
+      "time": "19:30",
+      "timezone": "America/Los_Angeles",
+      "opponent": "FC Dallas",
+      "home_away": "home",
+      "venue": "Lumen Field",
+      "competition": "MLS Regular Season",
+      "matchday": 11,
+      "result": null,
+      "rivalry_level": "low",
+      "notes": null
+    },
+    {
+      "id": "SEA-2026-12",
+      "date": "2026-05-24",
+      "time": "19:00",
+      "timezone": "America/Los_Angeles",
+      "opponent": "Vancouver Whitecaps",
+      "home_away": "away",
+      "venue": "BC Place",
+      "competition": "MLS Regular Season",
+      "matchday": 12,
+      "result": null,
+      "rivalry_level": "high",
+      "notes": "Cascadia Cup. Away trip to Vancouver."
+    }
+  ],
+  "historical_matchups": {
+    "portland_timbers": {
+      "all_time_record": "29W-21L-18D",
+      "home_record": "18W-6L-8D",
+      "last_5_home": ["W 2-0", "W 3-1", "L 0-1", "W 2-1", "D 1-1"],
+      "rivalry_name": "Cascadia Cup",
+      "context": "The biggest rivalry in MLS. Dating back to the USL era. The atmosphere at home Portland matches is the best of the season."
+    },
+    "vancouver_whitecaps": {
+      "all_time_record": "22W-12L-14D",
+      "home_record": "14W-3L-7D",
+      "last_5_home": ["W 3-0", "W 2-0", "D 0-0", "W 1-0", "W 2-1"],
+      "rivalry_name": "Cascadia Cup",
+      "context": "Part of the three-way Cascadia rivalry. Seattle has dominated at home in recent years."
+    },
+    "la_galaxy": {
+      "all_time_record": "15W-18L-10D",
+      "home_record": "10W-5L-6D",
+      "last_5_home": ["W 2-1", "L 1-2", "W 3-0", "D 1-1", "W 2-0"],
+      "rivalry_name": null,
+      "context": "Historic MLS franchise. Always draws a big crowd."
+    }
+  },
+  "season_ticket_info": {
+    "gold_tier_pricing": {
+      "section_122_per_match": 45,
+      "section_122_standard": 62,
+      "section_300_per_match": 28,
+      "section_300_standard": 38
+    },
+    "benefits": [
+      "Priority access to playoff tickets",
+      "10% discount on merchandise",
+      "Early entry (30 minutes before general admission)",
+      "Exclusive season ticket holder events",
+      "First pick on single-match ticket releases"
+    ]
+  }
+}

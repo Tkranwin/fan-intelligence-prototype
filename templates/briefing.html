@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ persona.display_name }} — Fan Intelligence Prototype</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* --- NAV --- */
+    .nav {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 0 24px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-brand { font-size: 15px; font-weight: 600; color: #1d1d1f; text-decoration: none; }
+    .nav-right { display: flex; align-items: center; gap: 16px; font-size: 13px; }
+    .nav-persona { color: #6b7280; }
+    .nav-switch { color: #005C37; text-decoration: none; font-weight: 500; }
+    .nav-switch:hover { color: #00804d; }
+
+    /* --- TABS --- */
+    .tabs {
+      display: flex; gap: 0; padding: 0 24px; background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .tab-btn {
+      padding: 12px 20px; font-size: 13px; font-weight: 500;
+      color: #9ca3af; background: none; border: none; cursor: pointer;
+      border-bottom: 2px solid transparent; transition: all 0.15s;
+    }
+    .tab-btn:hover { color: #6b7280; }
+    .tab-btn.active { color: #005C37; border-bottom-color: #005C37; }
+
+    /* --- MAIN LAYOUT --- */
+    .main { max-width: 1080px; margin: 0 auto; padding: 24px; }
+
+    /* --- QUALITY BAR --- */
+    .quality-card {
+      background: #ffffff; border-radius: 12px; padding: 16px 20px; margin-bottom: 20px;
+      border: 1px solid #e5e7eb;
+    }
+    .quality-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .quality-label { font-size: 14px; font-weight: 600; color: #1d1d1f; }
+    .quality-rate { font-size: 13px; color: #6b7280; }
+    .quality-rate strong { color: #005C37; font-weight: 600; }
+    .quality-track { height: 6px; background: #e5e7eb; border-radius: 3px; overflow: hidden; }
+    .quality-fill { height: 100%; border-radius: 3px; transition: all 0.3s ease; }
+    .quality-note { font-size: 10px; color: #9ca3af; margin-top: 6px; }
+
+    /* --- CONTENT GRID --- */
+    .content-grid { display: flex; gap: 20px; }
+
+    /* --- TOGGLE PANEL --- */
+    .toggle-panel {
+      width: 200px; flex-shrink: 0;
+      background: #ffffff; border-radius: 12px; padding: 16px;
+      border: 1px solid #e5e7eb;
+      align-self: flex-start; position: sticky; top: 24px;
+    }
+    .toggle-title { font-size: 11px; font-weight: 600; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 14px; }
+    .toggle-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 6px 0; cursor: pointer;
+    }
+    .toggle-label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: #374151; }
+    .toggle-dot { width: 8px; height: 8px; border-radius: 50%; transition: background 0.2s; }
+    .toggle-dot.off { background: #d1d5db !important; }
+    /* Switch track */
+    .switch { position: relative; width: 32px; height: 18px; flex-shrink: 0; }
+    .switch input { display: none; }
+    .switch-track {
+      position: absolute; inset: 0; border-radius: 9px; transition: background 0.15s;
+      cursor: pointer;
+    }
+    .switch input:checked + .switch-track { background: #005C37; }
+    .switch input:not(:checked) + .switch-track { background: #d1d5db; }
+    .switch-knob {
+      position: absolute; top: 2px; left: 2px; width: 14px; height: 14px;
+      background: white; border-radius: 50%; transition: transform 0.15s;
+      pointer-events: none;
+    }
+    .switch input:checked ~ .switch-knob { transform: translateX(14px); }
+
+    /* --- BRIEFING CARD --- */
+    .briefing-card {
+      flex: 1; min-width: 0;
+      background: #ffffff; border-radius: 14px; overflow: hidden;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    /* Email header (David) */
+    .email-header {
+      padding: 16px 24px; border-bottom: 1px solid #f0f0f0;
+      background: #fafafa;
+    }
+    .email-meta { font-size: 12px; color: #9ca3af; line-height: 1.6; }
+    .email-meta span { color: #6b7280; font-weight: 500; }
+    .email-subject { font-size: 17px; font-weight: 700; color: #111827; margin-top: 6px; }
+    /* SMS header (Maria) */
+    .sms-header {
+      padding: 12px 16px; display: flex; align-items: center; gap: 10px;
+      border-bottom: 1px solid #f0f0f0; background: #fafafa;
+    }
+    .sms-avatar {
+      width: 28px; height: 28px; border-radius: 50%; background: #005C37;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; color: white; flex-shrink: 0;
+    }
+    .sms-name { font-size: 13px; font-weight: 600; color: #111827; }
+    .sms-time { font-size: 10px; color: #9ca3af; }
+
+    /* Email / SMS body */
+    .briefing-body { padding: 24px; }
+    .briefing-body.sms-body { padding: 16px; }
+
+    /* Bridge text (grey connective tissue) */
+    .bridge { color: #9ca3af; }
+
+    /* Personalized inline text */
+    .p-text {
+      transition: opacity 0.2s ease, color 0.2s ease;
+      font-weight: 500;
+    }
+    .p-text.degraded {
+      color: #9ca3af !important;
+      font-weight: 400;
+    }
+
+    /* Source pill label */
+    .src-pill {
+      display: inline-block; font-size: 9px; font-weight: 600; letter-spacing: 0.03em;
+      padding: 1px 6px; border-radius: 3px; margin-left: 4px;
+      vertical-align: middle; transition: all 0.2s;
+      text-transform: uppercase;
+    }
+    .src-pill.degraded { background: #e5e7eb !important; color: #9ca3af !important; }
+
+    .para {
+      margin-bottom: 16px; font-size: 14.5px; line-height: 1.7; color: #374151;
+    }
+    .para.sms-para {
+      margin-bottom: 12px; font-size: 13px; line-height: 1.6;
+    }
+
+    .greeting { margin-bottom: 16px; color: #9ca3af; white-space: pre-line; }
+    .closing { margin-top: 8px; color: #9ca3af; white-space: pre-line; }
+
+    /* CTA */
+    .cta-area { padding: 0 24px 24px; }
+    .cta-area.sms-cta { padding: 0 16px 16px; }
+    .cta-btn {
+      display: block; width: 100%; padding: 14px; border: none; border-radius: 10px;
+      font-size: 14px; font-weight: 700; cursor: pointer; transition: all 0.2s;
+      text-align: center;
+    }
+    .cta-btn.personalized { background: #005C37; color: #fff; }
+    .cta-btn.personalized:hover { background: #007a4a; }
+    .cta-btn.generic { background: #e5e7eb; color: #9ca3af; cursor: default; }
+
+    /* --- MOBILE TOGGLES --- */
+    .mobile-toggles {
+      display: none; margin-bottom: 16px;
+      flex-wrap: wrap; gap: 6px;
+    }
+    .pill-btn {
+      font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 12px;
+      border: none; cursor: pointer; transition: all 0.15s; color: white;
+    }
+    .pill-btn.off { background: #e5e7eb !important; color: #9ca3af; }
+
+    /* --- FOOTER --- */
+    .footer { text-align: center; padding: 24px; font-size: 10px; color: #9ca3af; }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 768px) {
+      .toggle-panel { display: none; }
+      .mobile-toggles { display: flex; }
+      .content-grid { flex-direction: column; }
+      .briefing-body { padding: 16px; }
+      .cta-area { padding: 0 16px 16px; }
+      .para { font-size: 13.5px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <a href="/" class="nav-brand">Fan Intelligence Prototype</a>
+    <div class="nav-right">
+      <span class="nav-persona">{{ persona.display_name }}</span>
+      <a href="/briefing/{{ other_persona.id }}" class="nav-switch">Switch to {{ other_persona.display_name }} &rarr;</a>
+    </div>
+  </nav>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button id="tab-between" class="tab-btn" onclick="switchTab('between')">Between Matches</button>
+    <button id="tab-matchday" class="tab-btn" onclick="switchTab('matchday')">Matchday</button>
+  </div>
+
+  <div class="main">
+
+    <!-- Quality Bar -->
+    <div class="quality-card">
+      <div class="quality-header">
+        <span class="quality-label" id="quality-label">Fully Personalized</span>
+        <span class="quality-rate">Est. conversion rate: <strong id="quality-pct">12%</strong></span>
+      </div>
+      <div class="quality-track">
+        <div class="quality-fill" id="quality-bar" style="width:100%;background:#22c55e;"></div>
+      </div>
+      <div class="quality-note">Conversion estimates are illustrative.</div>
+    </div>
+
+    <!-- Mobile toggle pills -->
+    <div class="mobile-toggles" id="mobile-toggles"></div>
+
+    <!-- Grid: toggles + briefing -->
+    <div class="content-grid">
+
+      <!-- Toggle panel -->
+      <div class="toggle-panel">
+        <div class="toggle-title">Data Sources</div>
+        <div id="toggle-container"></div>
+      </div>
+
+      <!-- Briefing card -->
+      <div class="briefing-card" id="briefing-card"></div>
+
+    </div>
+  </div>
+
+  <div class="footer">Built by Tommy Kranwinkle &middot; Briefings generated by Claude from unified club data &middot; Data is illustrative</div>
+
+  <script>
+    const PERSONA = "{{ persona.id }}";
+    const PERSONA_NAME = "{{ persona.display_name }}";
+    const DEFAULT_MODE = "{{ default_mode }}";
+    const ALL = {{ sentences | safe }};
+
+    let currentMode = DEFAULT_MODE;
+
+    // Per-mode conversion curves: lapsed STH re-engagement is harder than
+    // new-fan opt-ins. Matchday nudges for someone without a ticket convert
+    // lower than a targeted between-matches offer with pricing and urgency.
+    const QUALITY_CURVES = {
+      "david-between": [
+        // Lapsed STH re-engagement via targeted offer — hardest conversion
+        { pct: "0.2%", label: "Generic Blast", color: "#ef4444" },
+        { pct: "0.5%", label: "Barely Personalized", color: "#f97316" },
+        { pct: "1.2%", label: "Weakly Personalized", color: "#f97316" },
+        { pct: "3%",   label: "Partially Personalized", color: "#eab308" },
+        { pct: "5%",   label: "Highly Personalized", color: "#22c55e" },
+        { pct: "8%",   label: "Fully Personalized", color: "#22c55e" },
+      ],
+      "david-matchday": [
+        // He doesn't have a ticket — bridging to future purchase, indirect
+        { pct: "0.1%", label: "Generic Blast", color: "#ef4444" },
+        { pct: "0.3%", label: "Barely Personalized", color: "#f97316" },
+        { pct: "0.8%", label: "Weakly Personalized", color: "#f97316" },
+        { pct: "1.5%", label: "Partially Personalized", color: "#eab308" },
+        { pct: "2.5%", label: "Highly Personalized", color: "#22c55e" },
+        { pct: "4%",   label: "Fully Personalized", color: "#22c55e" },
+      ],
+      "maria-matchday": [
+        // Already attending, CTA is low-friction email opt-in
+        { pct: "2%",  label: "Generic Blast", color: "#ef4444" },
+        { pct: "5%",  label: "Barely Personalized", color: "#f97316" },
+        { pct: "9%",  label: "Weakly Personalized", color: "#eab308" },
+        { pct: "14%", label: "Partially Personalized", color: "#eab308" },
+        { pct: "20%", label: "Highly Personalized", color: "#22c55e" },
+        { pct: "28%", label: "Fully Personalized", color: "#22c55e" },
+      ],
+      "maria-between": [
+        // First-timer to second match — specific offer, moderate friction
+        { pct: "0.3%", label: "Generic Blast", color: "#ef4444" },
+        { pct: "1%",   label: "Barely Personalized", color: "#f97316" },
+        { pct: "2.5%", label: "Weakly Personalized", color: "#f97316" },
+        { pct: "5%",   label: "Partially Personalized", color: "#eab308" },
+        { pct: "9%",   label: "Highly Personalized", color: "#22c55e" },
+        { pct: "14%",  label: "Fully Personalized", color: "#22c55e" },
+      ],
+    };
+
+    function getQuality() {
+      return QUALITY_CURVES[PERSONA + "-" + currentMode] || QUALITY_CURVES["david-between"];
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      setActiveTab();
+      render();
+    });
+
+    function switchTab(mode) {
+      currentMode = mode;
+      setActiveTab();
+      render();
+    }
+
+    function setActiveTab() {
+      document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+      const el = document.getElementById("tab-" + currentMode);
+      if (el) el.classList.add("active");
+    }
+
+    function render() {
+      const d = ALL[currentMode];
+      renderToggles(d);
+      renderBriefing(d);
+      applyDegradation();
+    }
+
+    // --- Toggles ---
+    function renderToggles(d) {
+      const c = document.getElementById("toggle-container");
+      c.innerHTML = "";
+      d.segments.forEach(seg => {
+        const row = document.createElement("div");
+        row.className = "toggle-row";
+        row.innerHTML = `
+          <div class="toggle-label">
+            <span class="toggle-dot" data-src="${esc(seg.source)}" style="background:${seg.color}"></span>
+            <span>${esc(seg.source)}</span>
+          </div>
+          <label class="switch">
+            <input type="checkbox" class="src-cb" data-source="${esc(seg.source)}" checked onchange="onToggle()">
+            <div class="switch-track"></div>
+            <div class="switch-knob"></div>
+          </label>
+        `;
+        c.appendChild(row);
+      });
+
+      // Mobile pills
+      const mc = document.getElementById("mobile-toggles");
+      mc.innerHTML = "";
+      d.segments.forEach(seg => {
+        const pill = document.createElement("button");
+        pill.className = "pill-btn";
+        pill.style.background = seg.color;
+        pill.dataset.source = seg.source;
+        pill.textContent = seg.source;
+        pill.onclick = () => {
+          const cb = document.querySelector(`.src-cb[data-source="${seg.source}"]`);
+          if (cb) { cb.checked = !cb.checked; onToggle(); }
+        };
+        mc.appendChild(pill);
+      });
+    }
+
+    function onToggle() {
+      syncMobilePills();
+      applyDegradation();
+    }
+
+    function syncMobilePills() {
+      const d = ALL[currentMode];
+      document.querySelectorAll(".pill-btn").forEach(p => {
+        const cb = document.querySelector(`.src-cb[data-source="${p.dataset.source}"]`);
+        const seg = d.segments.find(s => s.source === p.dataset.source);
+        if (cb && cb.checked) {
+          p.classList.remove("off");
+          p.style.background = seg ? seg.color : "#00C9A7";
+        } else {
+          p.classList.add("off");
+          p.style.background = "";
+        }
+      });
+    }
+
+    function getActive() {
+      const a = [];
+      document.querySelectorAll(".src-cb").forEach(cb => { if (cb.checked) a.push(cb.dataset.source); });
+      return a;
+    }
+
+    // --- Render briefing ---
+    function renderBriefing(d) {
+      const card = document.getElementById("briefing-card");
+      const isEmail = PERSONA === "david";
+      const paraClass = isEmail ? "para" : "para sms-para";
+
+      let headerHtml;
+      if (isEmail) {
+        headerHtml = `
+          <div class="email-header">
+            <div class="email-meta">
+              <span>From:</span> Seattle Sounders FC &lt;fans@soundersfc.com&gt;<br>
+              <span>To:</span> David Chen &lt;david.chen@email.com&gt;
+            </div>
+            <div class="email-subject" id="email-subject">${esc(d.subject)}</div>
+          </div>`;
+      } else {
+        headerHtml = `
+          <div class="sms-header">
+            <div class="sms-avatar">S</div>
+            <div>
+              <div class="sms-name">Seattle Sounders FC</div>
+              <div class="sms-time">now</div>
+            </div>
+          </div>`;
+      }
+
+      let bodyHtml = `<div class="greeting ${isEmail ? '' : 'sms-para'}">${esc(d.greeting)}</div>`;
+
+      d.segments.forEach((seg, i) => {
+        bodyHtml += `
+          <p class="${paraClass}" data-source="${esc(seg.source)}">
+            <span class="bridge">${esc(seg.bridge)}</span><span class="p-text" data-src="${esc(seg.source)}" data-personalized="${escAttr(seg.personalized)}" data-generic="${escAttr(seg.generic)}" style="color:${seg.color}">${esc(seg.personalized)}</span>
+            <span class="src-pill" data-src="${esc(seg.source)}" style="background:${seg.color}15;color:${seg.color}">${esc(seg.source)}</span>
+          </p>`;
+      });
+
+      bodyHtml += `<div class="closing ${isEmail ? '' : 'sms-para'}">${esc(d.closing)}</div>`;
+
+      const ctaClass = isEmail ? "cta-area" : "cta-area sms-cta";
+
+      card.innerHTML = `
+        ${headerHtml}
+        <div class="briefing-body ${isEmail ? '' : 'sms-body'}">${bodyHtml}</div>
+        <div class="${ctaClass}">
+          <button class="cta-btn personalized" id="cta-btn">${esc(d.cta.personalized)}</button>
+        </div>`;
+    }
+
+    // --- Degradation ---
+    function applyDegradation() {
+      const d = ALL[currentMode];
+      const active = getActive();
+      const total = d.segments.length;
+      const count = active.length;
+
+      // Quality bar
+      const curve = getQuality();
+      const q = curve[count] || curve[0];
+      document.getElementById("quality-label").textContent = q.label;
+      document.getElementById("quality-pct").textContent = q.pct;
+      const barPct = count === 0 ? 2 : ((count / total) * 100);
+      document.getElementById("quality-bar").style.width = barPct + "%";
+      document.getElementById("quality-bar").style.background = q.color;
+
+      // Toggle dots
+      document.querySelectorAll(".toggle-dot").forEach(dot => {
+        const src = dot.dataset.src;
+        if (active.includes(src)) { dot.classList.remove("off"); }
+        else { dot.classList.add("off"); }
+      });
+
+      // Inline text swap
+      document.querySelectorAll(".p-text").forEach(el => {
+        const src = el.dataset.src;
+        if (active.includes(src)) {
+          el.textContent = el.dataset.personalized;
+          const seg = d.segments.find(s => s.source === src);
+          el.style.color = seg ? seg.color : "#9ca3af";
+          el.classList.remove("degraded");
+        } else {
+          el.textContent = el.dataset.generic;
+          el.classList.add("degraded");
+        }
+      });
+
+      // Source pills
+      document.querySelectorAll(".src-pill").forEach(pill => {
+        const src = pill.dataset.src;
+        if (active.includes(src)) {
+          pill.classList.remove("degraded");
+          const seg = d.segments.find(s => s.source === src);
+          if (seg) {
+            pill.style.background = seg.color + "15";
+            pill.style.color = seg.color;
+          }
+        } else {
+          pill.classList.add("degraded");
+        }
+      });
+
+      // CTA
+      const btn = document.getElementById("cta-btn");
+      if (!btn) return;
+      const inactive = d.segments.map(s => s.source).filter(s => !active.includes(s));
+      if (inactive.length === 0) {
+        btn.className = "cta-btn personalized";
+        btn.textContent = d.cta.personalized;
+      } else {
+        btn.className = "cta-btn generic";
+        if (inactive.length >= 2) {
+          btn.textContent = d.cta.generic_multiple_off;
+        } else if (inactive.includes("Finance")) {
+          btn.textContent = d.cta.generic_finance_off;
+        } else if (inactive.includes("Ticketing")) {
+          btn.textContent = d.cta.generic_ticketing_off;
+        } else {
+          btn.textContent = d.cta.generic_finance_off;
+        }
+      }
+    }
+
+    function esc(s) {
+      const d = document.createElement("div");
+      d.textContent = s;
+      return d.innerHTML;
+    }
+    function escAttr(s) {
+      return s.replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+    }
+  </script>
+</body>
+</html>

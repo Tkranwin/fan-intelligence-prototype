@@ -1,0 +1,233 @@
+{
+  "name": "Lumen Field",
+  "city": "Seattle",
+  "state": "WA",
+  "capacity": 37722,
+  "address": "800 Occidental Ave S, Seattle, WA 98134",
+  "coordinates": {
+    "lat": 47.5952,
+    "lng": -122.3316
+  },
+  "gates": {
+    "north": {
+      "name": "North Gate",
+      "address": "Occidental Ave S & S Royal Brougham Way",
+      "opens_before_kickoff_minutes": 90,
+      "nearest_sections": ["100-110", "300-310"],
+      "transit_note": "Closest to Link Light Rail (Stadium Station)"
+    },
+    "south": {
+      "name": "South Gate",
+      "address": "Occidental Ave S & S Atlantic St",
+      "opens_before_kickoff_minutes": 90,
+      "nearest_sections": ["120-132", "320-332"],
+      "transit_note": "Closest to bus stops on 1st Ave S"
+    },
+    "east": {
+      "name": "East Gate",
+      "address": "4th Ave S entrance",
+      "opens_before_kickoff_minutes": 90,
+      "nearest_sections": ["200-220"],
+      "transit_note": "Closest to paid parking garages"
+    }
+  },
+  "sections": {
+    "100_level": {
+      "range": "100-144",
+      "description": "Lower bowl, closest to pitch",
+      "price_tier": "premium",
+      "notable": {
+        "122": "West sideline, midfield view. Popular season ticket section.",
+        "121": "West sideline, slightly north of midfield.",
+        "123": "West sideline, slightly south of midfield.",
+        "132": "South end, behind goal. Emerald City Supporters (ECS) section.",
+        "133": "South end, adjacent to ECS. High-energy atmosphere."
+      }
+    },
+    "200_level": {
+      "range": "200-244",
+      "description": "Club level with premium amenities",
+      "price_tier": "club",
+      "notable": {
+        "210": "Club level midfield. Includes lounge access."
+      }
+    },
+    "300_level": {
+      "range": "300-344",
+      "description": "Upper bowl",
+      "price_tier": "standard",
+      "notable": {
+        "322": "Upper bowl midfield. Best value with good sightlines."
+      }
+    }
+  },
+  "food_and_drink": {
+    "by_section": {
+      "120-125": [
+        {
+          "name": "Pagliacci Pizza",
+          "type": "pizza",
+          "location": "Section 122 concourse",
+          "popular_item": "Margherita slice"
+        },
+        {
+          "name": "Beecher's Mac & Cheese",
+          "type": "comfort food",
+          "location": "Section 123 concourse",
+          "popular_item": "World's Best Mac & Cheese"
+        },
+        {
+          "name": "Westland Whiskey Bar",
+          "type": "bar",
+          "location": "Section 121 concourse",
+          "popular_item": "Westland American Single Malt"
+        }
+      ],
+      "130-135": [
+        {
+          "name": "Emerald City Smokehouse",
+          "type": "bbq",
+          "location": "Section 132 concourse",
+          "popular_item": "Pulled pork sandwich"
+        },
+        {
+          "name": "Pike Place Chowder",
+          "type": "seafood",
+          "location": "Section 134 concourse",
+          "popular_item": "New England clam chowder"
+        }
+      ],
+      "300-310": [
+        {
+          "name": "Ivar's Fish Bar",
+          "type": "seafood",
+          "location": "Section 305 concourse",
+          "popular_item": "Fish and chips"
+        },
+        {
+          "name": "Local craft beer stand",
+          "type": "bar",
+          "location": "Section 308 concourse",
+          "popular_item": "Rotating local IPA"
+        }
+      ]
+    },
+    "new_for_2026": [
+      {
+        "name": "Ramen Rendezvous",
+        "type": "ramen",
+        "location": "Section 120 concourse",
+        "opened": "2026-03-01",
+        "note": "New addition for 2026 season. Tonkotsu and miso options."
+      },
+      {
+        "name": "Cloud City Coffee Cart",
+        "type": "coffee",
+        "location": "Section 124 concourse",
+        "opened": "2026-03-01",
+        "note": "Seattle-roasted espresso drinks. New for 2026."
+      }
+    ]
+  },
+  "transit": {
+    "light_rail": {
+      "station": "Stadium Station",
+      "line": "Link Light Rail (1 Line)",
+      "walk_minutes": 5,
+      "closest_gate": "North Gate",
+      "tip": "Trains run every 8 minutes on match days. Arrive at least 30 minutes early for crowds."
+    },
+    "bus": {
+      "routes": ["21", "50", "101", "150"],
+      "nearest_stop": "1st Ave S & S Royal Brougham Way",
+      "walk_minutes": 7
+    },
+    "rideshare": {
+      "dropoff_zone": "1st Ave S between S Atlantic St and S Royal Brougham Way",
+      "surge_warning": "Expect 2-3x surge pricing 30 minutes after final whistle."
+    },
+    "parking": {
+      "official_lots": [
+        {
+          "name": "North Lot",
+          "price": "$35",
+          "distance_walk_minutes": 5
+        },
+        {
+          "name": "Centurylink Garage",
+          "price": "$45",
+          "distance_walk_minutes": 3
+        }
+      ],
+      "tip": "Street parking on Occidental Ave is free after 6 PM on weekdays."
+    },
+    "by_neighborhood": {
+      "fremont_98103": {
+        "best_option": "Link Light Rail",
+        "directions": "Take the E Line RapidRide from Aurora Village TC or Fremont to Downtown, transfer to 1 Line southbound at Westlake Station to Stadium Station.",
+        "travel_time_minutes": 35,
+        "cost": "$2.75"
+      },
+      "capitol_hill_98102": {
+        "best_option": "Link Light Rail",
+        "directions": "1 Line southbound from Capitol Hill Station to Stadium Station.",
+        "travel_time_minutes": 12,
+        "cost": "$2.75"
+      },
+      "ballard_98107": {
+        "best_option": "Bus Route 40 + Light Rail",
+        "directions": "Route 40 to Westlake, transfer to 1 Line southbound to Stadium Station.",
+        "travel_time_minutes": 40,
+        "cost": "$2.75"
+      }
+    }
+  },
+  "stadium_changes_2026": [
+    {
+      "description": "New LED video boards installed behind both goals",
+      "area": "South and North ends",
+      "completed": "2026-02-15",
+      "impact": "Enhanced match atmosphere with larger, brighter displays"
+    },
+    {
+      "description": "Renovated west concourse concessions (Sections 118-126)",
+      "area": "Sections 118-126",
+      "completed": "2026-02-28",
+      "impact": "Wider concourse, two new food vendors, faster service flow"
+    },
+    {
+      "description": "New supporters merchandise kiosk near Section 132",
+      "area": "South end",
+      "completed": "2026-03-01",
+      "impact": "Dedicated match-day merch for ECS and general supporters"
+    },
+    {
+      "description": "WiFi upgrade across all sections",
+      "area": "Stadium-wide",
+      "completed": "2026-01-15",
+      "impact": "3x faster connectivity for mobile ordering and social sharing"
+    }
+  ],
+  "atmosphere": {
+    "supporters_section": "Sections 121-123 (Emerald City Supporters - ECS)",
+    "chants_primer": [
+      {
+        "name": "Boom Boom Clap",
+        "when": "Pre-match, to build energy",
+        "description": "Rhythmic clapping that builds in intensity. The whole stadium joins in."
+      },
+      {
+        "name": "Seattle, Seattle",
+        "when": "After a Sounders goal",
+        "description": "Call-and-response chant celebrating the goal. Listen for the drums."
+      },
+      {
+        "name": "Fight and Win",
+        "when": "Throughout the match",
+        "description": "Simple, repeating chant. Easy to join in even if it's your first match."
+      }
+    ],
+    "tifo": "ECS regularly displays large choreographed banners (tifo) before kickoff. Arrive early to see them.",
+    "family_friendly": "Sections 300-310 tend to be more family-friendly. ECS sections (121-123) are loud, standing-only, and 21+."
+  }
+}

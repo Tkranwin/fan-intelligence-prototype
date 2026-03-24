@@ -1,0 +1,159 @@
+{
+  "team": "Seattle Sounders FC",
+  "season": 2026,
+  "key_players": [
+    {
+      "name": "Jordan Morris",
+      "number": 13,
+      "position": "Forward",
+      "age": 31,
+      "nationality": "United States",
+      "hometown": "Mercer Island, WA",
+      "bio": "Homegrown talent and Seattle native. Turned down Bundesliga offers to stay with the Sounders. Fan favorite since his debut in 2016. Known for his pace and tireless work rate.",
+      "personality_note": "Local kid who chose to stay home. Deeply connected to the city and supporters. Often seen at community events around Seattle.",
+      "season_2026": {
+        "appearances": 6,
+        "goals": 4,
+        "assists": 2,
+        "minutes": 487,
+        "form": "excellent"
+      },
+      "career_milestones": {
+        "total_goals": 103,
+        "milestone_100th_goal": {
+          "date": "2026-02-28",
+          "opponent": "Preseason friendly vs. USL side",
+          "context": "Scored his 100th career Sounders goal in the final preseason match. Post-match interview: 'Every goal I've scored has been for this city. The supporters carried me through the injuries and the hard years.'"
+        },
+        "total_appearances": 248,
+        "years_with_club": 10
+      },
+      "recent_form": [
+        {"match": "vs LA Galaxy (Mar 7)", "contribution": "1 goal, 1 assist. Man of the match."},
+        {"match": "vs Austin FC (Mar 14)", "contribution": "0 goals. Came off bench at 65'."},
+        {"match": "vs Vancouver (Mar 21)", "contribution": "2 goals. Brace in Cascadia Cup match."}
+      ],
+      "fan_affinity_tags": ["homegrown", "loyalty", "seattle_native", "comeback_story", "jersey_top_seller"]
+    },
+    {
+      "name": "Albert Rusnak",
+      "number": 11,
+      "position": "Midfielder",
+      "age": 32,
+      "nationality": "Slovakia",
+      "bio": "Creative midfielder who pulls the strings in the Sounders attack. Joined from Real Salt Lake in 2022 and quickly became the team's primary playmaker.",
+      "personality_note": "Quiet professional. Lets his passing do the talking. Appreciated by tactical fans who notice the details.",
+      "season_2026": {
+        "appearances": 6,
+        "goals": 1,
+        "assists": 5,
+        "minutes": 540,
+        "form": "good"
+      },
+      "career_milestones": {
+        "total_assists_sounders": 42,
+        "years_with_club": 4
+      },
+      "recent_form": [
+        {"match": "vs LA Galaxy (Mar 7)", "contribution": "1 assist. Controlled the tempo."},
+        {"match": "vs Austin FC (Mar 14)", "contribution": "Key pass led to equalizer."},
+        {"match": "vs Vancouver (Mar 21)", "contribution": "2 assists. Dominated midfield."}
+      ],
+      "fan_affinity_tags": ["playmaker", "technical", "consistent"]
+    },
+    {
+      "name": "Yeimar Gomez Andrade",
+      "number": 28,
+      "position": "Center Back",
+      "age": 33,
+      "nationality": "Colombia",
+      "bio": "Rock-solid center back and defensive leader. Known for his aerial dominance and last-ditch tackles. One of the most reliable defenders in MLS.",
+      "personality_note": "Warrior mentality. The fans love his intensity. Celebrates defensive plays like goals.",
+      "season_2026": {
+        "appearances": 6,
+        "goals": 1,
+        "assists": 0,
+        "minutes": 540,
+        "form": "excellent"
+      },
+      "recent_form": [
+        {"match": "vs LA Galaxy (Mar 7)", "contribution": "Clean sheet. Won 8 aerial duels."},
+        {"match": "vs Austin FC (Mar 14)", "contribution": "Solid in a tough away match."},
+        {"match": "vs Vancouver (Mar 21)", "contribution": "1 goal from corner. Clean sheet."}
+      ],
+      "fan_affinity_tags": ["warrior", "leader", "defensive_hero"]
+    },
+    {
+      "name": "Leo Chu",
+      "number": 7,
+      "position": "Winger",
+      "age": 25,
+      "nationality": "Brazil",
+      "bio": "Exciting young winger signed in 2025. Electric pace and flair on the ball. Quickly becoming a fan favorite for his dribbling runs.",
+      "personality_note": "Flashy and fun to watch. Active on social media. Shares behind-the-scenes content that fans love. Learning English and posts about exploring Seattle.",
+      "season_2026": {
+        "appearances": 5,
+        "goals": 2,
+        "assists": 3,
+        "minutes": 380,
+        "form": "good"
+      },
+      "recent_form": [
+        {"match": "vs LA Galaxy (Mar 7)", "contribution": "1 goal. Spectacular solo run."},
+        {"match": "vs Austin FC (Mar 14)", "contribution": "Rested."},
+        {"match": "vs Vancouver (Mar 21)", "contribution": "1 goal, 1 assist. Terrorized the defense."}
+      ],
+      "fan_affinity_tags": ["exciting", "young_star", "social_media_active", "new_signing"]
+    },
+    {
+      "name": "Stefan Frei",
+      "number": 24,
+      "position": "Goalkeeper",
+      "age": 40,
+      "nationality": "Switzerland / United States",
+      "bio": "Club legend. The save in the 2016 MLS Cup final is the most iconic moment in franchise history. In his final season before retirement.",
+      "personality_note": "Cerebral, articulate. Beloved by the entire fanbase. His retirement at end of 2026 season is a major storyline. Community leader off the pitch.",
+      "season_2026": {
+        "appearances": 6,
+        "goals": 0,
+        "assists": 0,
+        "minutes": 540,
+        "form": "good",
+        "clean_sheets": 3,
+        "saves": 18
+      },
+      "career_milestones": {
+        "total_appearances_sounders": 342,
+        "clean_sheets": 112,
+        "years_with_club": 12,
+        "retirement_announcement": "2026-01-15",
+        "farewell_tour": "The club announced a season-long celebration of Frei's career. Special tributes planned at each home match."
+      },
+      "recent_form": [
+        {"match": "vs LA Galaxy (Mar 7)", "contribution": "Key save in 88th minute to preserve the win."},
+        {"match": "vs Austin FC (Mar 14)", "contribution": "6 saves in a tough away draw."},
+        {"match": "vs Vancouver (Mar 21)", "contribution": "Clean sheet. Controlled his box."}
+      ],
+      "fan_affinity_tags": ["legend", "retirement_season", "the_save", "leader", "community"]
+    }
+  ],
+  "tactical_notes": {
+    "formation": "4-2-3-1",
+    "style": "Possession-based with quick transitions. More attacking than recent seasons under new tactical approach.",
+    "season_narrative": "Strong start to 2026. 2W-1D in first 3 matches. The team looks revitalized after a disappointing 2025. New signings integrating well. Frei's farewell season adding emotional weight to every match."
+  },
+  "new_signings_2026": [
+    {
+      "name": "Diego Valeri Jr.",
+      "position": "Attacking Midfielder",
+      "from": "River Plate (Argentina)",
+      "context": "Son of former Portland Timbers legend Diego Valeri. The irony of him playing for Seattle has been a major talking point."
+    },
+    {
+      "name": "Kwame Asante",
+      "position": "Defensive Midfielder",
+      "from": "Ajax (Netherlands)",
+      "context": "Young Ghanaian talent. Brings energy and pressing ability to the midfield."
+    }
+  ]
+}
