@@ -219,7 +219,7 @@ def briefing(persona):
 BRIEFING_SENTENCES = {
     "david": {
         "between": {
-            "subject": "Portland is coming, David",
+            "subject": "The Timbers are coming, David",
             "greeting": "Hey David,\n\nHope you\u2019ve been well.",
             "closing": "We\u2019d love to see you back in Section 122.\n\nSeattle Sounders FC",
             "segments": [
@@ -227,7 +227,7 @@ BRIEFING_SENTENCES = {
                     "bridge": "We wanted to reach out because ",
                     "source": "Ticketing",
                     "color": "#3b82f6",
-                    "personalized": "Portland is coming April 12 \u2014 you attended every Portland home match during your 3-year season ticket run, and Section 122 Row F has two seats available.",
+                    "personalized": "The Portland Timbers are coming April 12 \u2014 you attended every Timbers home match during your 3-year season ticket run, and Section 122 Row F has two seats available.",
                     "generic": "the next home match is April 12 vs Portland Timbers and tickets are available.",
                 },
                 {
@@ -296,8 +296,8 @@ BRIEFING_SENTENCES = {
                     "bridge": "Looking ahead, ",
                     "source": "Finance",
                     "color": "#22c55e",
-                    "personalized": "Portland comes to Lumen Field April 12 \u2014 Gold members get early access at $45/seat instead of $72. Your status is still active.",
-                    "generic": "Portland visits April 12. Tickets available at soundersfc.com.",
+                    "personalized": "The Portland Timbers come to Lumen Field April 12 \u2014 Gold members get early access at $45/seat instead of $72. Your status is still active.",
+                    "generic": "The Portland Timbers visit April 12. Tickets available at soundersfc.com.",
                 },
                 {
                     "bridge": "And when you do make it back, ",
@@ -308,7 +308,7 @@ BRIEFING_SENTENCES = {
                 },
             ],
             "cta": {
-                "personalized": "Get Early Access to Portland Tickets \u2014 April 12",
+                "personalized": "Get Early Access to Timbers Tickets \u2014 April 12",
                 "generic_finance_off": "View Upcoming Matches",
                 "generic_ticketing_off": "Browse Upcoming Matches",
                 "generic_multiple_off": "Visit soundersfc.com",
@@ -394,7 +394,7 @@ BRIEFING_SENTENCES = {
                     "bridge": "Next up: ",
                     "source": "Schedule",
                     "color": "#22c55e",
-                    "personalized": "April 12 vs Portland \u2014 biggest rivalry in MLS. Saturday night, 7 PM. The atmosphere will be unreal.",
+                    "personalized": "April 12 vs the Portland Timbers \u2014 biggest rivalry in MLS. Saturday night, 7 PM. The atmosphere will be unreal.",
                     "generic": "Check soundersfc.com for the schedule.",
                 },
                 {
