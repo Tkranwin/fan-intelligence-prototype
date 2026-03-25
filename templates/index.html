@@ -36,16 +36,21 @@
 
     .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 32px; }
     @media (max-width: 640px) {
-      .main { padding: 20px 16px; }
-      .framing { font-size: 14px; margin-bottom: 20px; }
-      .section-label { margin-bottom: 8px; }
-      .compare { grid-template-columns: 1fr; gap: 8px; margin-bottom: 24px; }
-      .compare-card { padding: 12px 14px; }
-      .compare-text { font-size: 12px; line-height: 1.5; }
-      .compare-tag { margin-bottom: 4px; }
-      .persona-card { padding: 16px; }
-      .persona-name { font-size: 16px; }
-      .persona-desc { font-size: 12px; margin-bottom: 10px; }
+      .main { padding: 12px 16px; }
+      .framing { font-size: 12.5px; margin-bottom: 12px; line-height: 1.5; }
+      .section-label { font-size: 9px; font-weight: 500; color: #b0b5bc; margin-bottom: 6px; }
+      .compare { grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 0; }
+      .compare-card { padding: 10px 12px; }
+      .compare-text { font-size: 11px; line-height: 1.45; }
+      .compare-tag { font-size: 8px; margin-bottom: 3px; }
+      .divider { margin: 14px 0; }
+      .persona-card { padding: 14px; }
+      .persona-card.featured { padding-top: 12px; }
+      .persona-name { font-size: 15px; }
+      .persona-tagline { font-size: 12px; margin-bottom: 6px; }
+      .persona-desc { display: none; }
+      .persona-tag { font-size: 10px; padding: 2px 6px; }
+      .personas { gap: 10px; }
     }
 
     .compare-card { border-radius: 12px; padding: 16px; }
@@ -94,6 +99,11 @@
       padding: 3px 8px; border-radius: 4px; border: 1px solid #e5e7eb;
     }
 
+    .divider {
+      height: 1px; background: linear-gradient(90deg, transparent, #00C9A7 30%, #00C9A7 70%, transparent);
+      margin: 24px 0; opacity: 0.4;
+    }
+
     .footer {
       text-align: center; padding: 48px 24px 24px;
       font-size: 10px; color: #9ca3af;
@@ -130,6 +140,7 @@
       </div>
     </div>
 
+    <div class="divider"></div>
     <div class="section-label">Choose a fan persona</div>
     <div class="personas">
       <a href="/briefing/david" class="persona-card featured">
