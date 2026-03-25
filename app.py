@@ -7,7 +7,10 @@ from config import Config
 from data_fetcher import load_persona, assemble_sources, get_all_source_labels, get_always_on_sources
 from prompt_builder import build_prompt
 
-import anthropic
+try:
+    import anthropic
+except ImportError:
+    anthropic = None
 
 app = Flask(__name__)
 app.config.from_object(Config)
